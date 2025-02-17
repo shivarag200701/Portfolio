@@ -148,7 +148,7 @@ const Skills = () => {
   })
 
   return (
-    <section id="skills" className="py-20 bg-gray-50 dark:bg-gray-900">
+    <section id="skills" className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl font-semibold text-center text-gray-800 dark:text-white mb-12">My Skills</h2>
         <motion.div

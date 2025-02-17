@@ -6,13 +6,13 @@ import { motion } from "framer-motion"
 
 const Hero = () => {
   const [text, setText] = useState("")
-  const fullText = "A passionate Computer Science graduate student at Illinois Institute of Technology"
+  const fullText = "Building intelligent solutions at the intersection of AI, ML, and software engineering."
 
   useEffect(() => {
     let i = 0
     const typingEffect = setInterval(() => {
       if (i < fullText.length) {
-        setText((prevText) => prevText + fullText.charAt(i))
+        setText(fullText.substring(0, i + 1))
         i++
       } else {
         clearInterval(typingEffect)

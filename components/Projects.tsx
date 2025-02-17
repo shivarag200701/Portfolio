@@ -10,7 +10,7 @@ const projects = [
     title: "Microservices-Based Time-Series Forecasting Platform",
     description:
       "Built and deployed a forecasting application with 95% accuracy, using TensorFlow/Keras, Prophet, and StatsModel. Leveraged CI/CD pipelines with Docker and Google Cloud to cut deployment time by 30%.",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/Screenshot 2025-02-16 at 9.30.41 AM.png",
     details:
       "This project involved developing a scalable microservices architecture for time-series forecasting. Key features included real-time data processing, model training, and result visualization. The use of Docker and Google Cloud enabled efficient deployment and scaling of the application.",
   },
@@ -18,7 +18,7 @@ const projects = [
     title: "Toxic Tweets Dataset: NLP Problem",
     description:
       "Devised NLP methods to analyze and predict the toxicity levels of tweets, achieving a 90% accuracy in classification. Applied dimensionality reduction to textual data using Tf-Idf.",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "Gemini_Generated_Image_szzirmszzirmszzi.jpeg",
     details:
       "This project focused on developing a machine learning model to classify toxic tweets. The process involved data preprocessing, feature engineering using TF-IDF, and implementing various NLP techniques. The final model achieved high accuracy in identifying different levels of toxicity in social media content.",
   },
@@ -26,7 +26,7 @@ const projects = [
     title: "YouTube Data Harvesting And Warehousing",
     description:
       "Developed a project that enables users to access and analyze data from multiple YouTube channels. Acquired in-depth knowledge of Python scripting and API integration through the Google Developer Console.",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/youtube_data_harvesting_cover_oicture.png?height=100&width=100",
     details:
       "This project involved creating a system to collect, process, and analyze data from YouTube channels. Key components included API integration with the YouTube Data API, data warehousing solutions, and the development of analytics tools to derive insights from the collected data.",
   },

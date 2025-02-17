@@ -18,15 +18,7 @@ const experiences = [
       "Integrated third-party system by developing RESTful APIs, setting up Webhooks, and processing JSON data for seamless communication.",
     ],
   },
-  {
-    title: "Intern - Quantum Machine Learning",
-    company: "IBM Quantum",
-    date: "July 2021 - August 2021",
-    description: [
-      "Focused on parameterized quantum circuits and applying to basic problems.",
-      "Applied quantum kernels to enhance supervised and unsupervised learning models.",
-    ],
-  },
+
 ]
 
 const Experience = () => {
@@ -36,7 +28,7 @@ const Experience = () => {
         <h2 className="text-3xl font-semibold text-center text-gray-800 dark:text-white mb-12">Experience</h2>
         <div className="max-w-3xl mx-auto">
           {experiences.map((exp, index) => (
-            <div key={index} className="mb-8 bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+            <div key={index} className="mb-8 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
               <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">{exp.title}</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-2">{exp.company}</p>
               <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">{exp.date}</p>

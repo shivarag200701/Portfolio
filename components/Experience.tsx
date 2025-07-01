@@ -1,24 +1,32 @@
 const experiences = [
   {
-    title: "Teaching Assistant - Software Engineering",
+    title: "Graduate Developer",
     company: "Illinois Institute of Technology",
     date: "January 2025 - May 2025",
     description: [
-      "Graded assignments and exams with a 24-hour turnaround, ensuring timely feedback to students.",
-      "Coordinated and facilitated group project meetings, providing guidance and support to students in accomplishing project objectives.",
+      "Managed and developed the college website using Next.js and React, ensuring modern user interfaces and responsive design.",
+      "Assisted in the migration of the college's legacy website to a new Next.js platform, improving performance, scalability, and user experience.",
+      "Developed reusable React components and integrated with APIs to streamline front-end development and enhance dynamic content delivery.",
     ],
   },
   {
-    title: "ERP-Next Developer",
+    title: "Software Developer",
     company: "Agnikul Cosmos",
-    date: "August 2023 - January 2024",
+    date: "June 2023 - June 2024",
     description: [
-      "Created the Initial Prototype for a Systems Engineering tool helped to automate the Production process.",
-      "Customized ERPNext features by leveraging Jinja for templating and JavaScript for dynamic functionality, enhancing system usability and reducing data entry errors by 30%.",
-      "Integrated third-party system by developing RESTful APIs, setting up Webhooks, and processing JSON data for seamless communication.",
+      "Accelerated interface validation by 35% for Agnibaan launch vehicle by building async microservices using Node.js, Redis, and GraphQL APIs, enabling engineers to run real-time compatibility checks across mechanical, electrical, and fluidic subsystems.",
+      "Boosted debugging efficiency by 25% by building a React + TypeScript interface with GraphQL and Material UI, visualizing real-time inter-component dependencies and enabling engineers to identify failure points with precision.",
     ],
   },
-
+  {
+    title: "Intern",
+    company: "IASC Internship (in partnership with NASA & Pan-STARRS) ",
+    date: "May 2021 - July 2021",
+    description: [
+      "Collaborated with NASA and Pan-STARRS teams to identify and classify asteroids by developing and applying image classificationtechniques",
+      "Improved system efficiency by 40% through the integration of third-party systems using RESTful APIs, Webhooks, and JSON data processing for seamless communication.",
+    ],
+  },
 ]
 
 const Experience = () => {
@@ -46,4 +54,3 @@ const Experience = () => {
 }
 
 export default Experience
-

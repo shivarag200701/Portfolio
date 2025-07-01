@@ -1,40 +1,58 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
 import { X } from "lucide-react"
 
 const projects = [
   {
-    title: "Microservices-Based Time-Series Forecasting Platform",
-    description:
-      "Built and deployed a forecasting application with 95% accuracy, using TensorFlow/Keras, Prophet, and StatsModel. Leveraged CI/CD pipelines with Docker and Google Cloud to cut deployment time by 30%.",
-    image: "/Screenshot 2025-02-16 at 9.30.41 AM.png",
+    title: "GenAI Resume & Cover Letter Builder ",
+    description:[
+      "Automated resume tailoring by 80% using LangChain agents, OpenAI LLMs, and ChromaDB vector embeddings in a Retrieval-Augmented Generation (RAG) workflow.",
+    "Designed a full-stack pipeline combining React , FastAPI , and LangChain agents for dynamic job-role classification and document synthesis.",
+  "Achieved a Boosted resume-job match accuracy to 92% through semantic text chunking, embedding similarity search, and multi-agent prompt orchestration.",
+"Built modular AI agents for role detection, vector search, resume rewriting, and cover letter generation, replicating the decision-making flow of a real hiring assistant."],
+    image: "JobGenie.png",
     details:
-      "This project involved developing a scalable microservices architecture for time-series forecasting. Key features included real-time data processing, model training, and result visualization. The use of Docker and Google Cloud enabled efficient deployment and scaling of the application.",
+      "An AI-powered tool that tailors resumes and cover letters using job descriptions via LLMs, RAG, and embeddings.",
   },
   {
-    title: "Toxic Tweets Dataset: NLP Problem",
-    description:
-      "Devised NLP methods to analyze and predict the toxicity levels of tweets, achieving a 90% accuracy in classification. Applied dimensionality reduction to textual data using Tf-Idf.",
-    image: "Gemini_Generated_Image_szzirmszzirmszzi.jpeg",
+    title: "Satellite Collision Prediction Platform ",
+    description:[
+      "Engineered a full-stack satellite collision risk dashboard using FastAPI, Skyfield, and PostgreSQL, visualizing real-time orbit data via CesiumJS.",
+    "Scaled backend to analyze 11,643 satellites and 135M+ orbit pairings, reducing collision scan time by 85% through optimized spatial computation and batch processing.",
+  "Integrated APScheduler for automated 6-hour TLE updates and continuous background collision detection."],
+    image: "SatelliteCollisionPredictor.png",
     details:
-      "This project focused on developing a machine learning model to classify toxic tweets. The process involved data preprocessing, feature engineering using TF-IDF, and implementing various NLP techniques. The final model achieved high accuracy in identifying different levels of toxicity in social media content.",
+      "Visual dashboard to predict close approaches between orbiting satellites with real-time updates and 3D visualization.",
   },
   {
-    title: "YouTube Data Harvesting And Warehousing",
-    description:
-      "Developed a project that enables users to access and analyze data from multiple YouTube channels. Acquired in-depth knowledge of Python scripting and API integration through the Google Developer Console.",
-    image: "/youtube_data_harvesting_cover_oicture.png?height=100&width=100",
+    title: "Real-Time Messaging Platform",
+    description:[
+      "Built a scalable chat system with React, Express, MongoDB, and Socket.IO, supporting 1:1 messaging, read receipts, and persistent history.",
+    "Enabled secure payments using Stripe Checkout and Webhooks, reducing transaction time by ~40% and allowing in-chat digital purchases.",
+  "Designed RESTful APIs for seamless frontend-backend communication and robust message persistence."],
+    image: "MessagingApp.png",
     details:
-      "This project involved creating a system to collect, process, and analyze data from YouTube channels. Key components included API integration with the YouTube Data API, data warehousing solutions, and the development of analytics tools to derive insights from the collected data.",
+      "A full-featured messaging app with instant delivery, user authentication, and payment integration.",
   },
 ]
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null)
-
+// Prevent background scroll when modal is open
+useEffect(() => {
+  if (selectedProject) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "";
+  }
+  // Clean up on unmount
+  return () => {
+    document.body.style.overflow = "";
+  };
+}, [selectedProject]);
   return (
     <section id="projects" className="py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-6">
@@ -58,7 +76,7 @@ const Projects = () => {
               />
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-white">{project.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">{project.description}</p>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">{project.details}</p>
               </div>
             </motion.div>
           ))}
@@ -91,13 +109,16 @@ const Projects = () => {
               </div>
               <Image
                 src={selectedProject.image || "/placeholder.svg"}
-                alt={selectedProject.title}
-                width={400}
-                height={300}
-                className="w-full h-64 object-cover rounded-lg mb-4"
+                alt={selectedProject.title + " dashboard screenshot"}
+                width={800}
+                height={600}
+                className="w-full max-h-[70vh] object-contain rounded-lg border-2 border-blue-200 shadow-xl mb-4 bg-white"
               />
-              <p className="text-gray-600 dark:text-gray-300 mb-4">{selectedProject.description}</p>
-              <p className="text-gray-700 dark:text-gray-200">{selectedProject.details}</p>
+              <ul className="list-disc list-inside text-gray-600 dark:text-gray-300">
+                {selectedProject.description.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
             </motion.div>
           </motion.div>
         )}

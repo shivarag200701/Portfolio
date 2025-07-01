@@ -8,7 +8,7 @@ const educationData = [
         location: "Chicago, IL",
         degree: "Master of Science in Computer Science",
         graduationDate: "May 2026",
-        gpa: "4.0",
+        gpa: "3.66",
     },
     {
         school: "College of Engineering, Guindy Anna University",

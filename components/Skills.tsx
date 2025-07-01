@@ -21,6 +21,11 @@ const skills = [
           "https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E",
       },
       {
+        name: "TypeScript",
+        badge:
+          "https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white",
+      },
+      {
         name: "HTML",
         badge: "https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white",
       },
@@ -42,6 +47,15 @@ const skills = [
     category: "Frameworks",
     techs: [
       {
+        name: "Next.js",
+        badge: "https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white",
+      },
+      {
+        name: "Tailwind CSS",
+        badge:
+          "https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white",
+      },
+      {
         name: "React",
         badge: "https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB",
       },
@@ -55,14 +69,9 @@ const skills = [
           "https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB",
       },
       {
-        name: "Tailwind CSS",
-        badge:
-          "https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white",
-      },
-      {
-        name: "Next.js",
-        badge: "https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white",
-      },
+        name: "FastAPI",
+        badge: "https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi",
+      }
     ],
   },
   {

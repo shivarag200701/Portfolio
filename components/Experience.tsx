@@ -1,5 +1,15 @@
 const experiences = [
   {
+    title: "Software Engineering Intern",
+    company: "Mermory",
+    date: "July 2025 - Current",
+    description: [
+      "Developed SEO-optimized landing pages using Next.js, React, and TypeScript, improving crawlability and boosting Lighthouse SEO scores by 20+ points.",
+      "Built a Node.js-based transformation layer to fetch and cache data from Strapi CMS (hosted in a private VPC) into Redis, reducing content retrieval time by 50%.",
+      "Implemented dual sync mechanisms using webhooks and scheduled polling, ensuring real-time consistency and high availability of CMS content for server-rendered pages.",
+    ],
+  },
+  {
     title: "Graduate Developer",
     company: "Illinois Institute of Technology",
     date: "January 2025 - May 2025",
@@ -18,28 +28,30 @@ const experiences = [
       "Boosted debugging efficiency by 25% by building a React + TypeScript interface with GraphQL and Material UI, visualizing real-time inter-component dependencies and enabling engineers to identify failure points with precision.",
     ],
   },
-  {
-    title: "Intern",
-    company: "IASC Internship (in partnership with NASA & Pan-STARRS) ",
-    date: "May 2021 - July 2021",
-    description: [
-      "Collaborated with NASA and Pan-STARRS teams to identify and classify asteroids by developing and applying image classificationtechniques",
-      "Improved system efficiency by 40% through the integration of third-party systems using RESTful APIs, Webhooks, and JSON data processing for seamless communication.",
-    ],
-  },
-]
+];
 
 const Experience = () => {
   return (
     <section id="experience" className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-semibold text-center text-gray-800 dark:text-white mb-12">Experience</h2>
+        <h2 className="text-3xl font-semibold text-center text-gray-800 dark:text-white mb-12">
+          Experience
+        </h2>
         <div className="max-w-3xl mx-auto">
           {experiences.map((exp, index) => (
-            <div key={index} className="mb-8 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
-              <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">{exp.title}</h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-2">{exp.company}</p>
-              <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">{exp.date}</p>
+            <div
+              key={index}
+              className="mb-8 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6"
+            >
+              <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
+                {exp.title}
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-2">
+                {exp.company}
+              </p>
+              <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
+                {exp.date}
+              </p>
               <ul className="list-disc list-inside text-gray-600 dark:text-gray-300">
                 {exp.description.map((item, i) => (
                   <li key={i}>{item}</li>
@@ -50,7 +62,7 @@ const Experience = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Experience
+export default Experience;
